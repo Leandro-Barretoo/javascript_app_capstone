@@ -1,7 +1,7 @@
 import '../scss/style.scss';
 
-function sum(a, b) {
-  return a + b;
-}
+const url = 'https://api.imgflip.com/get_memes';
 
-export default sum;
+fetch(url)
+  .then((response) => response.json())
+  .then((json) => console.log(json.data.memes[88].url));
