@@ -24,6 +24,24 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.(gif|png|jpe?g)$/,
+        use: [
+            {
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'assets/images/'
+                }
+            }
+        ]
+      },
+      {
+          test: /\.html$/,
+          use: [
+              'html-loader'
+          ]
+      },
     ],
   },
 };

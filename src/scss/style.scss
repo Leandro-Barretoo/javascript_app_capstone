@@ -1,7 +1,32 @@
 @import url(reset.scss);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
 body {
+  font-family: 'Poppins', sans-serif;
   height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  background-blend-mode: transparent;
+}
+
+.nav-link {
+  flex: 1;
+  text-align: center;
+  font-size: 25px;
+}
+
+.separator {
+  width: 88%;
+  border: 1px solid grey;
 }
