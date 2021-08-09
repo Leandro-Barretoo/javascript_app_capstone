@@ -1,4 +1,7 @@
 @import url(reset.scss);
+
 body {
-  background-color: red;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
