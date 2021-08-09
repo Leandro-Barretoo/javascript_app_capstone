@@ -1,5 +1,7 @@
 @import url(reset.scss);
 
+$font: 'bangers';
+
 body {
   height: 100vh;
   display: flex;
@@ -8,8 +10,12 @@ body {
 
 footer {
   position: fixed;
-  left: 0;
+  margin-left: 3.5rem;
+  margin-bottom: 1.5rem;
   bottom: 0;
   width: 100%;
-  text-align: center;
+  text-align: left;
+  font-family: $font;
+  letter-spacing: 1.5px;
+  font-size: 15px;
 }
