@@ -45,7 +45,6 @@ footer {
 }
 
 .grid-container {
-  border: 1px solid red;
   padding: 10px;
   display: grid;
   grid-template-columns: auto auto auto;
@@ -53,5 +52,36 @@ footer {
 }
 
 .grid-item {
-  border: 1px solid green;
+  width: min-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meme-img {
+  padding: 5px;
+  width: 175px;
+  border-radius: 15px;
+  height: auto;
+}
+
+.meme-title {
+  font-size: 18px;
+  padding: 10px;
+}
+
+.comment-btn {
+  padding: 5px;
+  margin: 7px 10px;
+  border: none;
+  border-radius: 15px;
+  font-size: 15px;
+  box-shadow: 0 0 5px black;
 }
