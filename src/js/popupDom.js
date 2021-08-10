@@ -4,6 +4,7 @@ const popupDom = () => {
   const popupSection = document.getElementById('popup');
 
   const popupContainer = document.createElement('div');
+  popupContainer.setAttribute('id', 1234);
 
   const image = document.createElement('p'); // change it to img
   image.innerHTML = 'IMAGE'; // It will come from API
