@@ -4,7 +4,12 @@ const popupDom = () => {
   const popupSection = document.getElementById('popup');
 
   const popupContainer = document.createElement('div');
-  popupContainer.setAttribute('id', 1234);
+  popupContainer.setAttribute('id', 'test');
+  popupContainer.setAttribute('class', 'close-popup');
+
+  const closeBtn = document.createElement('button');
+  closeBtn.innerHTML = '&times;';
+  closeBtn.classList.add('close-btn');
 
   const image = document.createElement('p'); // change it to img
   image.innerHTML = 'IMAGE'; // It will come from API
@@ -38,7 +43,7 @@ const popupDom = () => {
 
   formContainer.append(formTitle, form, nameInput, commentInput, commentBtn);
 
-  popupContainer.append(image, imageTitle, commentContainer, formContainer);
+  popupContainer.append(closeBtn, image, imageTitle, commentContainer, formContainer);
   popupSection.appendChild(popupContainer);
 };
 

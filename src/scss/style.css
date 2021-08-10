@@ -43,4 +43,12 @@ footer {
   width: 88%;
   border: 1px solid grey;
 }
+
+.close-popup {
+  visibility: hidden;
+}
+
+.show-popup {
+  visibility: visible;
+}
 /*# sourceMappingURL=style.css.map */
