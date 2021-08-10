@@ -2,7 +2,7 @@ const popupDom = (item) => {
   const popupSection = document.getElementById('popup');
 
   const popupContainer = document.createElement('div');
-  popupContainer.setAttribute('class', 'close-popup', 'popup');
+  popupContainer.classList.add('meme-popup');
 
   const closeBtn = document.createElement('button');
   closeBtn.innerHTML = '&times;';
@@ -11,6 +11,7 @@ const popupDom = (item) => {
   const image = document.createElement('img');
   image.src = item.url;
   const imageTitle = document.createElement('p');
+  imageTitle.classList.add('image-title');
   imageTitle.innerHTML = item.name;
 
   // ! Comment Container
@@ -41,7 +42,7 @@ const popupDom = (item) => {
   // formContainer.append(formTitle, form, nameInput, commentInput, commentBtn);
 
   // popupContainer.append(closeBtn, image, imageTitle, commentContainer, formContainer);
-  popupContainer.append(closeBtn, image, imageTitle);
+  popupContainer.append(image, closeBtn, imageTitle);
   popupSection.appendChild(popupContainer);
 };
 
