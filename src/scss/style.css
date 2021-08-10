@@ -44,11 +44,7 @@ footer {
   border: 1px solid grey;
 }
 
-.close-popup {
-  visibility: hidden;
-}
-
-.show-popup {
-  visibility: visible;
+img {
+  width: 30%;
 }
 /*# sourceMappingURL=style.css.map */

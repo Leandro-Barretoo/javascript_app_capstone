@@ -1,18 +1,17 @@
-const popupDom = () => {
+const popupDom = (item) => {
   const popupSection = document.getElementById('popup');
 
   const popupContainer = document.createElement('div');
-  popupContainer.setAttribute('id', 'test');
-  popupContainer.setAttribute('class', 'close-popup');
+  popupContainer.setAttribute('class', 'close-popup', 'popup');
 
   const closeBtn = document.createElement('button');
   closeBtn.innerHTML = '&times;';
   closeBtn.classList.add('close-btn');
 
-  const image = document.createElement('p'); // change it to img
-  image.innerHTML = 'IMAGE'; // It will come from API
+  const image = document.createElement('img');
+  image.src = item.url;
   const imageTitle = document.createElement('p');
-  imageTitle.innerHTML = 'Image title'; // It will come from API
+  imageTitle.innerHTML = item.name;
 
   // ! Comment Container
   // const commentContainer = document.createElement('div');
