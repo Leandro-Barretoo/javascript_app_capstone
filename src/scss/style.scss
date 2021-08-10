@@ -46,20 +46,20 @@ footer {
 //! popup
 
 img {
-  width: 30%;
+  width: 40%;
   margin: 30px 20px 0 0;
 
-}
-
-img {
-  
 }
 
 .meme-popup {
   border: 2px solid black;
   position: absolute;
   top: 10%;
-  left: 25%;
+  left: 0;
+  right: 0;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
 }
 
