@@ -1,4 +1,6 @@
 import '../scss/style.scss';
-import addToGrid from './display.js';
+import addToGrid, { displayLikes } from './display.js';
+import checkElems from './likes.js';
 
-addToGrid();
+addToGrid(checkElems);
+displayLikes();

@@ -85,3 +85,12 @@ footer {
   font-size: 15px;
   box-shadow: 0 0 5px black;
 }
+
+.title-likes {
+  display: flex;
+  align-items: center;
+}
+
+.fa-heart {
+  padding: 5px;
+}
