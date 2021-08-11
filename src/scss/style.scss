@@ -1,13 +1,12 @@
-@import url(reset.scss);
+/** @format */
+
+@import 'reset.scss';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
 $font: 'bangers';
 
 body {
   font-family: 'Poppins', sans-serif;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 footer {
@@ -84,4 +83,43 @@ footer {
   border-radius: 15px;
   font-size: 15px;
   box-shadow: 0 0 5px black;
+}
+//! popup
+
+img {
+  width: 40%;
+  margin: 30px 20px 0 0;
+}
+
+.meme-popup {
+  border: 2px solid black;
+  background-color: white;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.close-btn {
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  font-size: 3rem;
+  position: absolute;
+
+}
+.image-text {
+  margin: 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
 }
