@@ -3,7 +3,8 @@ import addToGrid, { displayLikes } from './display.js';
 import checkElems from './likes.js';
 import displayData from './displayData.js';
 import popup from './popup.js';
+import getNumElems from './homeCounter.js';
 
-addToGrid(checkElems);
+addToGrid(checkElems, getNumElems);
 displayData(popup);
 displayLikes();

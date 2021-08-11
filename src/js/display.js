@@ -51,13 +51,14 @@ export const displayLikes = async () => {
   });
 };
 
-const addToGrid = async (callback) => {
+const addToGrid = async (callback, callbackOne) => {
   const ans = await callApi();
   const memesArr = ans.data.memes;
   memesArr.splice(-6).forEach((item) => {
     displayOnGrid(item);
   });
   callback();
+  callbackOne();
 };
 
 export default addToGrid;
