@@ -1,5 +1,6 @@
 const postLike = (itemID) => {
   fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/GuhYPExBlAlZ5RuYo3CN/likes', {
+    //GuhYPExBlAlZ5RuYo3CN
     method: 'POST',
     body: JSON.stringify({ item_id: itemID }),
     headers: {
@@ -16,7 +17,7 @@ const checkElems = () => {
       const idOfItem = e.target.className.split(' ')[0];
       const nextSib = e.target.nextSibling;
       postLike(idOfItem);
-      nextSib.innerHTML = parseInt(nextSib.innerHTML, 2) + 1;
+      nextSib.innerHTML = parseInt(nextSib.innerHTML, 10) + 1;
     });
   });
 };
