@@ -1,7 +1,9 @@
-// import '../scss/style.scss';
-import addToGrid from './display.js';
+import '../scss/style.scss';
+import addToGrid, { displayLikes } from './display.js';
+import checkElems from './likes.js';
 import displayData from './displayData.js';
 import popup from './popup.js';
 
-addToGrid();
+addToGrid(checkElems);
 displayData(popup);
+displayLikes();

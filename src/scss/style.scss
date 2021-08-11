@@ -110,8 +110,8 @@ img {
   background-color: white;
   font-size: 3rem;
   position: absolute;
-
 }
+
 .image-text {
   margin: 0;
 }
@@ -122,4 +122,15 @@ img {
 
 .visible {
   visibility: visible;
+}
+
+.title-likes {
+  display: flex;
+  align-items: center;
+}
+
+.fa-heart {
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
 }

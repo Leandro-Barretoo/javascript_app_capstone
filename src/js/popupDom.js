@@ -20,7 +20,9 @@ const popupDom = (item) => {
   // commentTitle.innerHTML = 'Comments'; // Add comment numbers, create function for that.
 
   // const comment = document.createElement('p');
-  // comment.innerHTML = 'Comment1'; // Comment-date  commenter-name: comment  // It will come from input
+  // comment.innerHTML = 'Comment1';
+  // Comment-date  commenter-name: comment
+  // It will come from input
 
   // commentContainer.append(commentTitle, comment);
 

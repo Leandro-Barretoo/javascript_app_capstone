@@ -8,15 +8,24 @@ const displayOnGrid = (item) => {
   gridImage.setAttribute('class', 'meme-img');
   gridImage.setAttribute('src', item.url);
   gridItem.appendChild(gridImage);
+  const titleLike = document.createElement('div');
+  titleLike.setAttribute('class', 'title-likes');
   const gridTitle = document.createElement('p');
   gridTitle.setAttribute('class', 'meme-title');
   gridTitle.innerHTML = item.name;
-  gridItem.appendChild(gridTitle);
+  titleLike.appendChild(gridTitle);
+  const likeIcon = document.createElement('i');
+  likeIcon.setAttribute('class', `${item.id} far fa-heart`);
+  titleLike.appendChild(likeIcon);
+  const numLikes = document.createElement('span');
+  numLikes.innerHTML = 0;
+  titleLike.appendChild(numLikes);
   const gridComments = document.createElement('input');
   gridComments.setAttribute('class', 'comment-btn');
   gridComments.setAttribute('id', item.id);
   gridComments.setAttribute('type', 'submit');
   gridComments.setAttribute('value', 'Comments');
+  gridItem.appendChild(titleLike);
   gridItem.appendChild(gridComments);
   itemContainer.appendChild(gridItem);
   gridContainer.appendChild(itemContainer);
@@ -28,12 +37,27 @@ const callApi = async () => {
   return data;
 };
 
-const addToGrid = async () => {
+export const displayLikes = async () => {
+  const request = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/GuhYPExBlAlZ5RuYo3CN/likes');
+  const likes = await request.json();
+  const arr = document.querySelectorAll('.fa-heart');
+  likes.forEach((item) => {
+    arr.forEach((arrItem) => {
+      const idItem = arrItem.className.split(' ')[0];
+      if (idItem === item.item_id) {
+        arrItem.nextSibling.innerHTML = item.likes;
+      }
+    });
+  });
+};
+
+const addToGrid = async (callback) => {
   const ans = await callApi();
   const memesArr = ans.data.memes;
   memesArr.splice(-6).forEach((item) => {
     displayOnGrid(item);
   });
+  callback();
 };
 
 export default addToGrid;
