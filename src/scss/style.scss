@@ -48,7 +48,6 @@ footer {
 img {
   width: 40%;
   margin: 30px 20px 0 0;
-
 }
 
 .meme-popup {
@@ -67,9 +66,18 @@ img {
   cursor: pointer;
   border: 0;
   background-color: white;
-  font-size: 4rem;
+  font-size: 3rem;
   position: absolute;
+
 }
 .image-text {
   margin: 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
 }

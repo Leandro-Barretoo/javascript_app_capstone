@@ -110,11 +110,19 @@ img {
   cursor: pointer;
   border: 0;
   background-color: white;
-  font-size: 4rem;
+  font-size: 3rem;
   position: absolute;
 }
 
 .image-text {
   margin: 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
 }
 /*# sourceMappingURL=style.css.map */

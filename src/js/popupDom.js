@@ -2,11 +2,11 @@ const popupDom = (item) => {
   const popupSection = document.getElementById('popup');
 
   const popupContainer = document.createElement('div');
-  popupContainer.classList.add('meme-popup');
+  popupContainer.id = item.id + 1;
+  popupContainer.classList.add('meme-popup', 'hidden');
 
   const closeBtn = document.createElement('button');
-  closeBtn.innerHTML = '&times;';
-  closeBtn.classList.add('close-btn');
+  closeBtn.classList.add('close-btn', 'fas', 'fa-times');
 
   const image = document.createElement('img');
   image.src = item.url;
