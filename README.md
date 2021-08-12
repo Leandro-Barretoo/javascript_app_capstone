@@ -1,11 +1,12 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Leaderboard
+# JavaScript Capstone
 
-> CHANGE IT
+This project is about  building our own web application based on an external API.
 
-![screenshot](./screenshot.png)
+![screenshot](./capstone.png)
 
+The API provides data about a topic where you can like and leave a comment.
 
 ## Built With
 
@@ -15,18 +16,24 @@
 - Javacript
 - Webpack
 
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
 
 ### Setup
-To run code locally, open your terminal and follow these steps:
 
-- `git clone (git@github.com:ahmetbozaci/leaderboard.git)`
-- `cd leaderboard` 
-- `npm install`
-- `npm start` 
-  
-*After `npm start` webpack will automatically open your browser.*
+- Clone the repo `git clone git@github.com:Leandro-Barretoo/javascript_app_capstone.git`
+- `cd` into the directory
+- run `npm i` or `npm install` to download required node_modules  
+- open in your desired code editor
+- run `npm start` to start live server
 
 ## Authors
+
+👤 **Leandro Barreto**
+
+- GitHub: [@Leandro-Barretoo](https://github.com/Leandro-Barretoo)
+- LinkedIn: [Leandro Barreto](https://www.linkedin.com/in/leandroobarreto/)
 
 👤 **Ahmet Bozacı**
 - Github:[ ahmtbozaci](https://github.com/ahmetbozaci)
