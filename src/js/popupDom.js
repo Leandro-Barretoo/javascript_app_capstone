@@ -38,24 +38,24 @@ const popupDom = (item) => {
 
   getMemeData();
 
-  // // ! Form Container
-  // const formContainer = document.createElement('div');
-  // const formTitle = document.createElement('h4');
-  // formTitle.innerHTML = 'Add a comment';
+  // ! Form Container
+  const formContainer = document.createElement('div');
+  const formTitle = document.createElement('h4');
+  formTitle.innerHTML = 'Add a comment';
 
-  // const form = document.createElement('form');
-  // const nameInput = document.createElement('input');
-  // nameInput.placeholder = 'Your name';
+  const form = document.createElement('form');
+  const nameInput = document.createElement('input');
+  nameInput.placeholder = 'Your name';
 
-  // const commentInput = document.createElement('textarea');
-  // commentInput.placeholder = 'Your comment';
+  const commentInput = document.createElement('textarea');
+  commentInput.placeholder = 'Your comment';
 
-  // const commentBtn = document.createElement('button');
-  // commentBtn.innerHTML = 'Comment';
+  const commentBtn = document.createElement('button');
+  commentBtn.innerHTML = 'Comment';
 
-  // formContainer.append(formTitle, form, nameInput, commentInput, commentBtn);
+  formContainer.append(formTitle, form, nameInput, commentInput, commentBtn);
 
-  popupContainer.append(closeBtn, image, imageTitle, commentContainer);
+  popupContainer.append(closeBtn, image, imageTitle, commentContainer, formContainer);
   popupSection.appendChild(popupContainer);
 };
 
