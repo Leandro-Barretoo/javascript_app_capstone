@@ -31,6 +31,8 @@ const popupDom = (item) => {
     const data = await response.json();
     if (response.status === 200) {
       data.forEach((item) => { commentTexts.innerHTML += `<p>${item.creation_date} ${item.username}: ${item.comment}</p>`; });
+    } else {
+      commentTexts.innerHTML += '<p>No comments</p>';
     }
   };
 
