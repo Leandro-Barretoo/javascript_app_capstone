@@ -15,16 +15,28 @@ const popupDom = (item) => {
   imageTitle.innerHTML = item.name;
 
   // ! Comment Container
-  // const commentContainer = document.createElement('div');
-  // const commentTitle = document.createElement('h4');
-  // commentTitle.innerHTML = 'Comments'; // Add comment numbers, create function for that.
+  const commentContainer = document.createElement('div');
+  const commentTitle = document.createElement('h4');
+  commentTitle.innerHTML = 'Comments'; // Add comment numbers, create function for that.
 
-  // const comment = document.createElement('p');
-  // comment.innerHTML = 'Comment1';
-  // Comment-date  commenter-name: comment
-  // It will come from input
+  const commentTexts = document.createElement('div');
 
-  // commentContainer.append(commentTitle, comment);
+  commentContainer.append(commentTitle, commentTexts);
+
+  // 61581, 176908,   //error 157978092, 89655, 7183956, 71428573
+  //! API SECTİON
+  const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/GuhYPExBlAlZ5RuYo3CN/comments?item_id=';
+  const getMemeData = async () => {
+    const response = await fetch(`${URL}${Number(item.id)}`);
+    const data = await response.json();
+    if (response.status === 200) {
+      data.forEach((item) => { commentTexts.innerHTML += `<p>${item.creation_date} ${item.username}: ${item.comment}</p>`; });
+    } else {
+      commentTexts.innerHTML += '<p>No comments</p>';
+    }
+  };
+
+  getMemeData();
 
   // // ! Form Container
   // const formContainer = document.createElement('div');
@@ -43,8 +55,7 @@ const popupDom = (item) => {
 
   // formContainer.append(formTitle, form, nameInput, commentInput, commentBtn);
 
-  // popupContainer.append(closeBtn, image, imageTitle, commentContainer, formContainer);
-  popupContainer.append(image, closeBtn, imageTitle);
+  popupContainer.append(closeBtn, image, imageTitle, commentContainer);
   popupSection.appendChild(popupContainer);
 };
 
