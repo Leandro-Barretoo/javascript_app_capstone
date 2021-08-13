@@ -1,4 +1,4 @@
-import '../scss/style.scss';
+// import '../scss/style.scss';
 import addToGrid, { displayLikes } from './display.js';
 import checkElems from './likes.js';
 import displayData from './displayData.js';
@@ -9,6 +9,3 @@ import commentSubmit from './commentForm.js';
 addToGrid(checkElems, getNumElems);
 displayData(popup, commentSubmit);
 displayLikes();
-displayData(popup);
-displayLikes();
-

@@ -16,7 +16,6 @@ img {
   text-align: center;
 }
 
-
 .close-btn {
   cursor: pointer;
   border: 0;
@@ -32,7 +31,6 @@ img {
 
 .hidden {
   display: none;
- 
 }
 
 .visible {
@@ -55,12 +53,19 @@ h4 {
 }
 
 .d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .form {
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 textarea {
@@ -70,3 +75,4 @@ textarea {
 .comment-submit {
   margin: 0 105px 10px 0;
 }
+/*# sourceMappingURL=popup.css.map */

@@ -20,7 +20,7 @@ const popupDom = (item) => {
   const commentContainer = document.createElement('div');
 
   const commentTitle = document.createElement('h4');
-  commentTitle.innerHTML = 'Comments'; // Add comment numbers, create function for that.
+  commentTitle.innerHTML = 'Comments<span class="comments-number"></span>';
 
   const commentTexts = document.createElement('div');
   commentTexts.classList.add('comment-container');
@@ -34,7 +34,10 @@ const popupDom = (item) => {
     const data = await response.json();
     if (response.status === 200) {
       data.forEach((item) => {
-        commentTexts.innerHTML += `<p class="comment-text">${item.creation_date} ${item.username}: ${item.comment}</p>`;
+        const p = document.createElement('p');
+        p.classList.add('comment-text');
+        p.innerHTML = `${item.creation_date} ${item.username}: ${item.comment}`;
+        commentTexts.append(p);
       });
     } else {
       commentTexts.innerHTML += '<p>No comments</p>';
@@ -75,6 +78,16 @@ const popupDom = (item) => {
     formContainer,
   );
   popupSection.appendChild(popupContainer);
+
+  // const commentCounter = () => {
+
+  //   const commentsNumber = document.querySelectorAll('.comments-number');
+  //   const popupdiv = document.getElementById(Number(item.id) + 1);
+  //   console.log(popupdiv.getElementsByClassName('comment-text'));
+  // };
+
+  // commentCounter();
+  console.log(document.querySelectorAll('.comment-text'));
 };
 
 export default popupDom;
