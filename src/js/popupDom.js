@@ -51,8 +51,8 @@ const popupDom = (item) => {
   const formTitle = document.createElement('h4');
   formTitle.innerHTML = 'Add a comment';
 
-  const form = document.createElement('form');
-  form.classList.add('d-flex');
+  const form = document.createElement('div');
+  form.classList.add('d-flex', 'form');
   const nameInput = document.createElement('input');
   nameInput.classList.add('name-input');
   nameInput.id = Number(item.id) + 2;
@@ -67,8 +67,8 @@ const popupDom = (item) => {
   commentBtn.classList.add('comment-submit');
 
   commentBtn.innerHTML = 'Comment';
-  // form.append();
-  formContainer.append(formTitle, form, nameInput, commentInput, commentBtn);
+  form.append(nameInput, commentInput, commentBtn);
+  formContainer.append(formTitle, form);
 
   popupContainer.append(
     closeBtn,
