@@ -55,6 +55,7 @@ footer {
   width: min-content;
   margin: auto;
   display: flex;
+  padding: 50px;
   flex-direction: column;
   text-align: center;
 }
@@ -66,15 +67,17 @@ footer {
 }
 
 .meme-img {
-  padding: 5px;
-  width: 175px;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
   border-radius: 15px;
-  height: auto;
+  margin: 0;
 }
 
 .meme-title {
   font-size: 18px;
   padding: 10px;
+  flex: 1;
 }
 
 .comment-btn {
@@ -89,6 +92,7 @@ footer {
 .title-likes {
   display: flex;
   align-items: center;
+  padding: 21px;
 }
 
 .fa-heart {
