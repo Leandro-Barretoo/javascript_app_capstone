@@ -8,6 +8,8 @@ This project is about  building our own web application based on an external API
 
 The API provides data about a topic where you can like and leave a comment.
 
+## Presentation Video
+[Video](https://drive.google.com/file/d/1TLh-8PgSv4oJwsoLeGK0XeTl5YDjLePq/view?usp=sharing)
 ## Built With
 
 - HTML
