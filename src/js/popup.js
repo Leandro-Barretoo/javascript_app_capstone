@@ -2,14 +2,11 @@ import commentCounter from './commentCounter.js';
 
 const popup = () => {
   const commentBtns = document.querySelectorAll('.comment-btn');
-  const commentNumberSpan = document.querySelector('.comments-number');
-  console.log(commentNumberSpan)
   commentBtns.forEach((button) => button.addEventListener('click', (e) => {
     const memeContainer = document.getElementById(Number(e.target.id) + 1);
     memeContainer.classList.add('visible');
     commentCounter(e.target.id);
   }));
-
 
   const closeBtns = document.querySelectorAll('.close-btn');
   const closePopup = () => {
@@ -21,7 +18,7 @@ const popup = () => {
   };
 
   closeBtns.forEach((closeBtn) => closeBtn.addEventListener('click', (e) => {
-    const title = e.target.parentNode.childNodes[3].childNodes[0]
+    const title = e.target.parentNode.childNodes[3].childNodes[0];
     title.innerHTML = 'Comments';
     closePopup();
   }));

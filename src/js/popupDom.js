@@ -78,16 +78,6 @@ const popupDom = (item) => {
     formContainer,
   );
   popupSection.appendChild(popupContainer);
-
-  // const commentCounter = () => {
-
-  //   const commentsNumber = document.querySelectorAll('.comments-number');
-  //   const popupdiv = document.getElementById(Number(item.id) + 1);
-  //   console.log(popupdiv.getElementsByClassName('comment-text'));
-  // };
-
-  // commentCounter();
-  console.log(document.querySelectorAll('.comment-text'));
 };
 
 export default popupDom;
