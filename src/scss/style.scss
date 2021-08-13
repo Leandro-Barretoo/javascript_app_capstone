@@ -7,12 +7,19 @@ $font: 'bangers';
 
 body {
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.grid-section {
+  flex: 1;
 }
 
 footer {
-  position: absolute;
   margin-left: 30px;
-  bottom: 15px;
+  margin-top: 20px;
+  padding: 15px;
 }
 
 .navigation {
