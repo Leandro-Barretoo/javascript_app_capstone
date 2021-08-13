@@ -1,5 +1,3 @@
-/** @format */
-
 const popupDom = (item) => {
   const popupSection = document.getElementById('popup');
 
@@ -26,7 +24,6 @@ const popupDom = (item) => {
   commentTexts.classList.add('comment-container');
   commentContainer.append(commentTitle, commentTexts);
 
-  // 61581, 176908,   //error 157978092, 89655, 7183956, 71428573
   //! API SECTİON
   const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/GuhYPExBlAlZ5RuYo3CN/comments?item_id=';
   const getMemeData = async () => {
@@ -54,6 +51,7 @@ const popupDom = (item) => {
   const form = document.createElement('div');
   form.classList.add('d-flex', 'form');
   const nameInput = document.createElement('input');
+  nameInput.required = true;
   nameInput.classList.add('name-input');
   nameInput.id = Number(item.id) + 2;
   nameInput.placeholder = 'Your name';
