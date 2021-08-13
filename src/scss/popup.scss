@@ -1,5 +1,5 @@
 img {
-  width: 40%;
+  width: 70%;
   margin: 30px 20px 0 0;
 }
 
@@ -16,12 +16,14 @@ img {
   text-align: center;
 }
 
+
 .close-btn {
   cursor: pointer;
   border: 0;
   background-color: white;
   font-size: 3rem;
   position: absolute;
+  margin: 0px 0px 0 520px;
 }
 
 .image-text {
@@ -43,7 +45,7 @@ img {
 
 h4 {
   font-size: 16px;
-  margin: 10px 0 20px 0;
+  margin: 40px 0 30px 0;
 }
 
 .comment-text {
