@@ -5,9 +5,17 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.grid-section {
+  flex: 1;
 }
 
 footer {
+
   position: fixed;
   margin-left: 3.5rem;
   margin-bottom: 1.5rem;
@@ -16,17 +24,25 @@ footer {
   text-align: left;
   letter-spacing: 1.5px;
   font-size: 15px;
+
+  margin-left: 30px;
+  margin-top: 20px;
+  padding: 15px;
+
 }
 
 .navigation {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 3px;
+  padding-top: 10px;
 }
 
 .logo {
-  width: 150px;
+  width: 100px;
   height: auto;
+  margin: 0;
+  margin-left: 159px;
 }
 
 .nav-link {

@@ -9,3 +9,6 @@ import commentSubmit from './commentForm.js';
 addToGrid(checkElems, getNumElems);
 displayData(popup, commentSubmit);
 displayLikes();
+displayData(popup);
+displayLikes();
+
