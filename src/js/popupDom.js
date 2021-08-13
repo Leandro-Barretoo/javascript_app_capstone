@@ -18,11 +18,12 @@ const popupDom = (item) => {
 
   // ! Comment Container
   const commentContainer = document.createElement('div');
+
   const commentTitle = document.createElement('h4');
   commentTitle.innerHTML = 'Comments'; // Add comment numbers, create function for that.
 
   const commentTexts = document.createElement('div');
-
+  commentTexts.classList.add('comment-container');
   commentContainer.append(commentTitle, commentTexts);
 
   // 61581, 176908,   //error 157978092, 89655, 7183956, 71428573
@@ -63,8 +64,8 @@ const popupDom = (item) => {
   commentBtn.classList.add('comment-submit');
 
   commentBtn.innerHTML = 'Comment';
-  form.append(nameInput, commentInput, commentBtn);
-  formContainer.append(formTitle, form);
+  // form.append();
+  formContainer.append(formTitle, form, nameInput, commentInput, commentBtn);
 
   popupContainer.append(
     closeBtn,
