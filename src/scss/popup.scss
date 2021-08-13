@@ -1,0 +1,76 @@
+img {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+
+#popup {
+  flex-direction: column;
+  margin: 150px;
+}
+
+.meme-popup {
+  border: 2px solid black;
+  width: max-content;
+  flex-direction: column;
+  margin: auto;
+  padding: 25px;
+}
+
+.close-btn {
+  width: min-content;
+  padding: 15px;
+  border: none;
+  align-self: flex-end;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-title {
+  margin: 10px;
+  font-size: 20px;
+  text-align: center;
+  padding: 17px;
+}
+
+.comments-section {
+  padding: 20px;
+}
+
+h4 {
+  font-size: 16px;
+  margin: 40px 0 30px 0;
+}
+
+.comment-text {
+  margin: 20px;
+  font-size: 12px;
+}
+
+.form-section {
+  padding: 20px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.form {
+  flex-direction: column;
+  align-items: center;
+}
+
+textarea {
+  margin: 10px;
+}
+
+.comment-submit {
+  margin: 0 105px 10px 0;
+}
