@@ -1,6 +1,5 @@
 const commentSubmit = () => {
   const test = document.querySelectorAll('.comment-submit');
-  console.log(Number(test[0].parentNode.parentNode.id));
   test.forEach((btn) => btn.addEventListener('click', () => {
     const username = document.getElementById(Number(btn.parentNode.parentNode.id) + 1).value;
     const comment = document.getElementById(Number(btn.parentNode.parentNode.id) + 2).value;
