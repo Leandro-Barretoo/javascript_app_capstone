@@ -2,7 +2,6 @@
 @import './popup.scss';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
-$font: 'bangers';
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -15,7 +14,6 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: left;
-  font-family: $font;
   letter-spacing: 1.5px;
   font-size: 15px;
 }
@@ -82,4 +80,15 @@ footer {
   border-radius: 15px;
   font-size: 15px;
   box-shadow: 0 0 5px black;
+}
+
+.title-likes {
+  display: flex;
+  align-items: center;
+}
+
+.fa-heart {
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
 }

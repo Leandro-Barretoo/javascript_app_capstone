@@ -33,7 +33,7 @@ const popupDom = (item) => {
     const data = await response.json();
     if (response.status === 200) {
       data.forEach((item) => {
-        commentTexts.innerHTML += `<p>${item.creation_date} ${item.username}: ${item.comment}</p>`;
+        commentTexts.innerHTML += `<p class="comment-text">${item.creation_date} ${item.username}: ${item.comment}</p>`;
       });
     } else {
       commentTexts.innerHTML += '<p>No comments</p>';
@@ -48,6 +48,7 @@ const popupDom = (item) => {
   formTitle.innerHTML = 'Add a comment';
 
   const form = document.createElement('form');
+  form.classList.add('d-flex');
   const nameInput = document.createElement('input');
   nameInput.classList.add('name-input');
   nameInput.id = Number(item.id) + 2;
@@ -62,8 +63,8 @@ const popupDom = (item) => {
   commentBtn.classList.add('comment-submit');
 
   commentBtn.innerHTML = 'Comment';
-
-  formContainer.append(formTitle, form, nameInput, commentInput, commentBtn);
+  form.append(nameInput, commentInput, commentBtn);
+  formContainer.append(formTitle, form);
 
   popupContainer.append(
     closeBtn,
