@@ -12,6 +12,8 @@ The API provides data about a topic where you can like and leave a comment.
 
 [Live Demo Link](https://leandro-barretoo.github.io/javascript_app_capstone/)
 
+## Presentation Video
+[Video](https://drive.google.com/file/d/1TLh-8PgSv4oJwsoLeGK0XeTl5YDjLePq/view?usp=sharing)
 ## Built With
 
 - HTML
