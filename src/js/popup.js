@@ -1,7 +1,7 @@
 const popup = () => {
   const commentBtns = document.querySelectorAll('.comment-btn');
   commentBtns.forEach((button) => button.addEventListener('click', (e) => {
-    const memeContainer = document.getElementById(e.target.id + 1);
+    const memeContainer = document.getElementById(Number(e.target.id) + 1);
     memeContainer.classList.add('visible');
   }));
 
