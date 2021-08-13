@@ -8,6 +8,10 @@ This project is about  building our own web application based on an external API
 
 The API provides data about a topic where you can like and leave a comment.
 
+## Live Link
+
+[Live Demo Link](https://leandro-barretoo.github.io/javascript_app_capstone/)
+
 ## Built With
 
 - HTML
