@@ -1,8 +1,10 @@
+/** @format */
+
 const popupDom = (item) => {
   const popupSection = document.getElementById('popup');
 
   const popupContainer = document.createElement('div');
-  popupContainer.id = item.id + 1;
+  popupContainer.id = Number(item.id) + 1;
   popupContainer.classList.add('meme-popup', 'hidden');
 
   const closeBtn = document.createElement('button');
@@ -30,7 +32,9 @@ const popupDom = (item) => {
     const response = await fetch(`${URL}${Number(item.id)}`);
     const data = await response.json();
     if (response.status === 200) {
-      data.forEach((item) => { commentTexts.innerHTML += `<p>${item.creation_date} ${item.username}: ${item.comment}</p>`; });
+      data.forEach((item) => {
+        commentTexts.innerHTML += `<p>${item.creation_date} ${item.username}: ${item.comment}</p>`;
+      });
     } else {
       commentTexts.innerHTML += '<p>No comments</p>';
     }
@@ -45,17 +49,29 @@ const popupDom = (item) => {
 
   const form = document.createElement('form');
   const nameInput = document.createElement('input');
+  nameInput.classList.add('name-input');
+  nameInput.id = Number(item.id) + 2;
   nameInput.placeholder = 'Your name';
 
   const commentInput = document.createElement('textarea');
+  commentInput.classList.add('comment');
+  commentInput.id = Number(item.id) + 3;
   commentInput.placeholder = 'Your comment';
 
   const commentBtn = document.createElement('button');
+  commentBtn.classList.add('comment-submit');
+
   commentBtn.innerHTML = 'Comment';
 
   formContainer.append(formTitle, form, nameInput, commentInput, commentBtn);
 
-  popupContainer.append(closeBtn, image, imageTitle, commentContainer, formContainer);
+  popupContainer.append(
+    closeBtn,
+    image,
+    imageTitle,
+    commentContainer,
+    formContainer,
+  );
   popupSection.appendChild(popupContainer);
 };
 
