@@ -18,6 +18,7 @@ const popupDom = (item) => {
 
   // ! Comment Container
   const commentContainer = document.createElement('div');
+  commentContainer.classList.add('comments-section');
 
   const commentTitle = document.createElement('h4');
   commentTitle.innerHTML = 'Comments<span class="comments-number"></span>';
@@ -48,6 +49,7 @@ const popupDom = (item) => {
 
   // ! Form Container
   const formContainer = document.createElement('div');
+  formContainer.classList.add('form-section');
   const formTitle = document.createElement('h4');
   formTitle.innerHTML = 'Add a comment';
 
