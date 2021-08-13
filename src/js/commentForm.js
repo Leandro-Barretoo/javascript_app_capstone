@@ -7,7 +7,7 @@ const commentSubmit = () => {
     const p = document.createElement('p');
     p.classList.add('comment-text');
     p.innerHTML = `${username}: ${comment}`;
-    commentContainer.childNodes[3].childNodes[1].appendChild(p);
+    commentContainer.childNodes[3].childNodes[1].append(p);
     fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/GuhYPExBlAlZ5RuYo3CN/comments', {
       method: 'POST',
       body: JSON.stringify({
